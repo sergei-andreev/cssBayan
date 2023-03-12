@@ -1,0 +1,125 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: cornsilk;
+    font-family: 'Open Sans', sans-serif;
+    color: cornflowerblue;
+    font-size: 10px;
+}
+
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.accordions:hover .accordion__icon {
+    display: block;
+}
+
+.accordions:hover .accordion {
+    color: black;
+}
+
+.accordion {
+    margin: 1rem 0;
+    border-top: 1px solid #00000030;
+}
+
+.accordion__label {
+    font-size: 1.6rem;
+}
+
+.accordion__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion:hover .accordion__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion__icon {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.accordion:hover .accordion__icon {
+    transform: rotate(0deg);
+}
+
+.accordion__image {
+    width: 0rem;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.accordion:hover .accordion__image {
+    width: 25rem;
+    opacity: 1;
+}
+
+.accordion__icon {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion__checkbox:checked + .accordion__label {
+    color: black;
+}
+
+.accordion__checkbox:active + .accordion__label {
+    opacity: 0.9;
+    color: cornflowerblue;
+}
+
+
+.accordion__checkbox:checked + .accordion__label > .accordion__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion__checkbox:checked + .accordion__label > .accordion__content > .accordion__image {
+    width: 25rem;
+    opacity: 1;
+}
+
+@media screen and (max-width: 820px) {
+    html, body {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    html, body {
+        font-size: 0.5rem;
+    }
+}
