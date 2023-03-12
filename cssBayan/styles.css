@@ -11,7 +11,7 @@ html, body {
 body {
     background: cornsilk;
     font-family: 'Open Sans', sans-serif;
-    color:  cornflowerblue;
+    color: cornflowerblue;
     font-size: 10px;
 }
 
@@ -45,6 +45,7 @@ body {
 .accordion__label {
     font-size: 1.6rem;
 }
+
 .accordion__content {
     display: flex;
     justify-content: center;
@@ -55,6 +56,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .accordion__icon {
@@ -89,9 +91,15 @@ body {
     cursor: pointer;
 }
 
-.accordion__checkbox:checked + .accordion__label{
+.accordion__checkbox:checked + .accordion__label {
     color: black;
 }
+
+.accordion__checkbox:active + .accordion__label {
+    opacity: 0.9;
+    color: cornflowerblue;
+}
+
 
 .accordion__checkbox:checked + .accordion__label > .accordion__content {
     display: flex;
