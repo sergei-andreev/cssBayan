@@ -89,6 +89,10 @@ body {
     cursor: pointer;
 }
 
+.accordion__checkbox:checked + .accordion__label{
+    color: black;
+}
+
 .accordion__checkbox:checked + .accordion__label > .accordion__content {
     display: flex;
     justify-content: center;
